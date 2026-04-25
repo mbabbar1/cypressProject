@@ -28,7 +28,6 @@ export class AdminPage {
             cy.get('.oxd-select-dropdown > :nth-child(3)').click()
         }
     }
-
     ClickSearch() {
         cy.get('.oxd-form-actions > .oxd-button--secondary').click()
     }

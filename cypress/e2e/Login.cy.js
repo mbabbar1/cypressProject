@@ -18,7 +18,6 @@ describe('Login Test Suite', () => {
     loginPage.clickLogin()
     cy.get('.oxd-alert-content > .oxd-text').should('contain', 'Invalid credentials')
   })
-
   it('login with invalid password', () => {
     loginPage.enterUsername('Admin123')
     loginPage.enterpassword('admin')

@@ -10,7 +10,6 @@ describe('Admin Search Test Suite', () => {
   beforeEach(() => {
     loginPage.loginToApplication('Admin', 'admin123')
   })
-
   it('Search for Admin UserName', () => {
     adminpage.AdminPageLink()
     adminpage.EnterUsername('Admin')
