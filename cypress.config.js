@@ -11,3 +11,11 @@ module.exports = defineConfig({
     },
   },
 });
+const { downloadFile } = require('cypress-downloadfile/lib/addPlugin');
+module.exports = defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      on('task', { downloadFile });
+    },
+  },
+});

@@ -11,6 +11,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "cypress": "^15.14.0"
+    "cypress": "^15.14.0",
+    "cypress-downloadfile": "^1.2.4"
+  },
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.8"
   }
 }
