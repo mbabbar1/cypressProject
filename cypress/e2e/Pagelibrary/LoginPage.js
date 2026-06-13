@@ -1,24 +1,30 @@
-export class LoginPage {
-    visit() {
-        cy.visit('https://opensource-demo.orangehrmlive.com/')
+
+class LoginPage {
+
+    visitLoginPage() {
+        cy.visit("https://opensource-demo.orangehrmlive.com/");
     }
-    username_textbox = '[name="username"]'
-    password_textbox = '[name="password"]'
-    login_button = '.oxd-button'
+
     enterUsername(username) {
-        cy.get(this.username_textbox).type(username)
+        cy.get('[name="username"]').type(username);
     }
-    enterpassword(password) {
-        cy.get(this.password_textbox).type(password)
+    
+
+    enterPassword(password) {
+        cy.get('[name="password"]').type(password);
     }
-    clickLogin() {
-        cy.get(this.login_button).click()
+
+    clickLoginButton() {
+        cy.get('.oxd-button[type="submit"]', { timeout: 5000 }).click();
     }
-    loginToApplication(username, password) {
-        this.visit()
-        this.enterUsername(username)
-        this.enterpassword(password)
-        this.clickLogin()
-        cy.wait(2000)
+
+    userPic() {
+        return cy.get('.oxd-topbar-header-userarea img');
+    }
+
+    getErrorMessage() {
+        return cy.get('.oxd-alert-content-text');
     }
 }
+
+module.exports = LoginPage;

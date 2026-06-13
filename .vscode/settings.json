@@ -1,0 +1,9 @@
+{
+  "[gherkin]": {
+    "editor.defaultFormatter": "cucumber.cucumber-official"
+  },
+  "cucumber.glue": [
+    "cypress/e2e/step_definitions/*.js"
+  ],
+  "cucumber.formatOnSave": false
+}
